@@ -34,8 +34,6 @@ def login():
             print(form.errors)
             return redirect(url_for("auth.login"))
 
-
-
 @bp.route("/register",methods=["GET","POST"])
 def register():
     if request.method=="GET":
@@ -56,9 +54,6 @@ def register():
 
 
 
-
-
-
 @bp.route("/captcha/email")
 def get_email_captcha():
     email = request.args.get("email")
@@ -74,13 +69,6 @@ def get_email_captcha():
     db.session.add(email_captcha)
     db.session.commit()
     return jsonify({"code":200,"message":"","data":None})
-
-
-@bp.route("/mail/test")
-def mail_test():
-    message =Message(subject="邮箱测试",recipients=["chenasuny@qq.com"],body="这是一条验证邮件：123456")
-    mail.send(message)
-    return "邮件发送成功了！"
 
 @bp.route("/logout")
 def logout():
