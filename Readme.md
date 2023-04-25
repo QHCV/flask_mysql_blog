@@ -15,7 +15,7 @@ pip install -r requirements.txt
 
 ​		在设置->账户下开启服务，获取授权码
 
-![image-20230425173307729](../../../AppData/Roaming/Typora/typora-user-images/image-20230425173307729.png)
+![image-20230425175433004](https://cdn.jsdelivr.net/gh/QHCV/picture-obs/2023.04/image-20230425175433004.png)
 
 3.初始化数据库
 
